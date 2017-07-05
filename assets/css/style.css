@@ -1,0 +1,325 @@
+:root {
+    /*
+        global declared vars
+     */
+    --white: #ffffff;
+    --black: #000000;
+    --gray: #9e9e9e;
+    --gray-1: #757575;
+    --gray-2: #616161;
+    --gray-3: #424242;
+    --gray-4: #212121;
+    --gray-5: #DAD9D9;
+    --gray--1: #bdbdbd;
+    --gray--2: #e0e0e0;
+    --gray--3: #e0e8f0;
+    --gray--4: #eeeeee;
+    --red: #f44336;
+    --red-1: #e53935;
+    --red-2: #d32f2f;
+    --red-3: #c62828;
+    --red-4: #b71c1c;
+    --pink: #e91e63;
+    --pink-1: #d81b60;
+    --pink-2: #c2185b;
+    --pink-3: #ad1457;
+    --pink-4: #880e4f;
+    --blue: #2196f3;
+    --blue-1: #1e88e5;
+    --blue-2: #1976d2;
+    --blue-3: #1565c0;
+    --blue-4: #0d47a1;
+    --cyan: #00bcd4;
+    --cyan-1: #00acc1;
+    --cyan-2: #0097a7;
+    --cyan-3: #00838f;
+    --cyan-4: #006064;
+    --green: #4caf50;
+    --green-1: #43a047;
+    --green-2: #388e3c;
+    --green-3: #2e7d32;
+    --green-4: #1b5e20;
+    --teal: #009688;
+    --teal-1: #00897b;
+    --teal-2: #00796b;
+    --teal-3: #00695c;
+    --teal-4: #004d40;
+    --yellow: #ffeb3b;
+    --yellow-1: #fdd835;
+    --yellow-2: #fbc02d;
+    --yellow-3: #f9a825;
+    --yellow-4: #f57f17;
+    --purple: #9c27b0;
+    --purple-1: #8e24aa;
+    --purple-2: #7b1fa2;
+    --purple-3: #6a1b9a;
+    --purple-4: #4a148c;
+    --amber: #ffc107;
+    --amber-1: #ffb300;
+    --amber-2: #ffa000;
+    --amber-3: #ff8f00;
+    --amber-4: #ff6f00;
+    --orange: #ff9800;
+    --orange-1: #fb8c00;
+    --orange-2: #f57c00;
+    --orange-3: #ef6c00;
+    --orange-4: #e65100;
+    --brown: #795548;
+    --brown-1: #6d4c41;
+    --brown-2: #5d4037;
+    --brown-3: #4e342e;
+    --brown-4: #3e2723;
+    --icon-hover-background-color: rgba(255, 255, 255, 0.1);
+      --password-toggle-top: -5px;
+    --password-toggle-right: 2px;
+    --password-toggle-font-size: 2rem;
+    /*
+       scrollbar declared vars
+     */
+    --scrollbar-width: 5px;
+    --scrollbar-height: 50px;
+    --scrollbar-border-raduis: 10px;  
+    /*
+        header declared vars
+     */
+    --header-height: 40px !important;
+    --header-brand-logo-img-margin-right: 10px !important;
+    --header-brand-logo-img-size-ellipse-value: 10px;
+    --header-brand-logo-text-font-size-ellipse-value: 28px;
+    /*
+        footer declared vars
+     */
+    --footer-logo-size: 30px;
+    --footer-logo-text-margin-left: 10px;
+    --footer-description-margin-top: 25px;
+    --footer-menu-title-margin-bottom: 1em;
+    --footer-menu-title-padding-bottom: 0.6em;
+    --footer-copyright-height: 50px;
+    --footer-copyright-image-ellipse-size: 15px;
+}
+
+::-webkit-scrollbar {
+    background: transparent;
+    width: var(--scrollbar-width);
+    height: var(--scrollbar-width);
+}
+
+:::-webkit-scrollbar-track {
+    background-color: transparent;
+}
+
+::-webkit-scrollbar-track-piece {
+    background-color: transparent;
+}
+
+:-webkit-scrollbar-button {
+    height: 0;
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--white);
+    height: var(--scrollbar-height);
+    border-radius: var(--scrollbar-border-raduis);
+}
+
+::-webkit-scrollbar-corner {
+    height: 0;
+    background-color: transparent;
+}
+
+::-webkit-resizer {
+    height: 0;
+    background-color: transparent;
+}
+
+*,
+*::before,
+*::after {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+*:focus {
+    outline: none;
+}
+
+body {
+    background-color: var(--blue-2);
+}
+
+.no-select {
+    cursor: default !important;
+}
+
+.no-padding {
+    padding: 0 !important;
+}
+
+.no-pointer {
+    pointer-events: none!important;
+    box-shadow: none!important;
+    color: #9F9F9F !important;
+    cursor: default!important;
+}
+
+.no-pointer:hover {
+    box-shadow: none !important;
+    color: #9F9F9F !important;
+}
+
+.background {
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: 0;
+    z-index: 1;
+    padding: 0;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center center;
+}
+
+.password-toggle {
+    cursor: pointer;
+    position: absolute;
+    top: var(--password-toggle-top);
+    right: var(--password-toggle-right);
+    font-size: var(--password-toggle-font-size);
+}
+
+.password-toggle:hover {
+    color: var(--pink-4);
+}
+
+.spliter {
+    border: 2px solid var(--white);
+    position: absolute;
+    width: 100%;
+    margin: 0 !important;
+    padding: 0;
+    left: 0;
+}
+
+header.navbar-fixed {
+    margin: 0 !important;
+    height: var(--header-height);
+    font-variant: small-caps !important;
+}
+
+header.navbar-fixed nav {
+    margin: 0 !important;
+    height: var(--header-height);
+    line-height: var(--header-height);
+    background-color: var(--blue-4);
+}
+
+header.navbar-fixed nav a {
+    color: var(--white);
+}
+
+header.navbar-fixed .brand-logo {
+    height: var(--header-height);
+    line-height: var(--header-height);
+}
+
+header.navbar-fixed .brand-logo img.responsive-img {
+    display: inline-block !important;
+    margin-right: var(--header-brand-logo-img-margin-right);
+    margin-top: calc(var(--header-brand-logo-img-size-ellipse-value) / 2);
+    width: calc(var(--header-height) - var(--header-brand-logo-img-size-ellipse-value)) !important;
+    height: calc(var(--header-height) - var(--header-brand-logo-img-size-ellipse-value)) !important;
+    line-height: calc(var(--header-height) - var(--header-brand-logo-img-size-ellipse-value)) !important;
+}
+
+header.navbar-fixed .brand-logo .text-logo {
+    display: flex !important;
+    line-height: 0 !important;
+    display: -webkit-flex !important;
+    flex-direction: column !important;
+    margin-top: calc(var(--header-brand-logo-img-size-ellipse-value) / 2);
+}
+
+header.navbar-fixed .brand-logo .text-logo span {
+    height: calc((var(--header-height) - var(--header-brand-logo-img-size-ellipse-value)) / 3)!important;
+    font-size: calc(var(--header-height) - var(--header-brand-logo-text-font-size-ellipse-value)) !important;
+    line-height: calc((var(--header-height) - var(--header-brand-logo-img-size-ellipse-value)) / 3)!important;
+}
+
+header.navbar-fixed ul li i.material-icons {
+    height: var(--header-height);
+    font-variant: none !important;
+    line-height: var(--header-height);
+}
+
+footer.page-footer {
+    color: var(--white);
+    background-color: var(--blue-4);
+}
+
+footer.page-footer .row {
+    margin-bottom: 0 !important;
+}
+
+footer.page-footer a {
+    color: var(--white);
+}
+
+footer.page-footer .footer-logo {
+    height: var(--footer-logo-size);
+    line-height: var(--footer-logo-size);
+}
+
+footer.page-footer .footer-logo .text-logo {
+    text-transform: capitalize;
+    margin-left: calc(var(--footer-logo-size) + var(--footer-logo-text-margin-left));
+}
+
+footer.page-footer .footer-logo img {
+    width: var(--footer-logo-size);
+    height: var(--footer-logo-size);
+}
+
+footer.page-footer .footer-description {
+    margin-top: var(--footer-description-margin-top);
+}
+
+footer.page-footer .footer-menu-title {
+    text-transform: capitalize;
+    border-bottom: 2px solid var(--white);
+    margin-bottom: var(--footer-menu-title-margin-bottom);
+    padding-bottom: var(--footer-menu-title-padding-bottom);
+}
+
+footer.page-footer .footer-menu {
+    text-transform: capitalize;
+}
+
+footer.page-footer .footer-menu li a:hover {
+    text-decoration: underline;
+}
+
+footer.page-footer .footer-copyright {
+    padding: 0 !important;
+    color: var(--white) !important;
+    height: var(--footer-copyright-height) !important;
+    min-height: var(--footer-copyright-height) !important;
+    max-height: var(--footer-copyright-height) !important;
+}
+
+footer.page-footer .footer-copyright .copyright-text {
+    line-height: var(--footer-copyright-height) !important;
+}
+
+footer.page-footer .footer-copyright .copyright-img {
+    padding: 0 !important;
+}
+
+footer.page-footer .footer-copyright img {
+    margin-top: calc(var(--footer-copyright-image-ellipse-size) / 2);
+    margin-left: calc(var(--footer-copyright-image-ellipse-size) / 1.5);
+    width: calc(var(--footer-copyright-height) - var(--footer-copyright-image-ellipse-size));
+    height: calc(var(--footer-copyright-height) - var(--footer-copyright-image-ellipse-size));
+}
